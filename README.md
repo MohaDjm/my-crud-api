@@ -27,19 +27,19 @@ Les principales dépendances sont :
 
 🚀 Installation
 
-    Cloner le projet :
+Cloner le projet :
 
-git clone https://github.com/MohaDjm/my-crud-api.git
-cd my-crud-api
+    git clone https://github.com/MohaDjm/my-crud-api.git
+    cd my-crud-api
 
 Installer les dépendances :
 
-npm install
+    npm install
 
 Configurer la base de données Cassandra :
 
-    Assurez-vous que Cassandra est en cours d'exécution.
-    Dans cqlsh, créez un keyspace et une table products :
+Assurez-vous que Cassandra est en cours d'exécution.
+Dans cqlsh, créez un keyspace et une table products :
 
     CREATE KEYSPACE test_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
@@ -55,7 +55,7 @@ Configurer la base de données Cassandra :
 
 Configurer les variables d'environnement :
 
-    Créez un fichier .env à la racine du projet pour stocker les configurations, comme le port de l'API :
+Créez un fichier .env à la racine du projet pour stocker les configurations, comme le port de l'API :
 
         PORT=3000
 
@@ -63,7 +63,7 @@ Configurer les variables d'environnement :
 
 Pour démarrer le serveur en mode développement, exécutez :
 
-node app.js
+    node app.js
 
 L'API sera accessible à l'adresse http://localhost:3000.
 🌐 Utilisation de l'API avec CURL
@@ -75,7 +75,7 @@ Voici des exemples de requêtes CURL pour chaque route de l'API.
     URL : http://localhost:3000/api/products
     Commande CURL :
 
-curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d "{\"name\":\"Example Product\", \"description\":\"This is an example product\", \"price\":19.99, \"category\":\"Electronics\"}"
+    curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d "{\"name\":\"Example Product\", \"description\":\"This is an example product\", \"price\":19.99, \"category\":\"Electronics\"}"
 
 Réponse :
 
@@ -98,7 +98,7 @@ Réponse :
 
     Commande CURL :
 
-curl -X GET http://localhost:3000/api/products/{product_id}
+    curl -X GET http://localhost:3000/api/products/{product_id}
 
 Remplacez {product_id} par l'UUID du produit.
 
@@ -120,7 +120,7 @@ Réponse (exemple) :
 
     Commande CURL :
 
-curl -X PUT http://localhost:3000/api/products/{product_id} -H "Content-Type: application/json" -d "{\"name\":\"Updated Product\", \"description\":\"Updated description\", \"price\":29.99, \"category\":\"Updated Category\"}"
+    curl -X PUT http://localhost:3000/api/products/{product_id} -H "Content-Type: application/json" -d "{\"name\":\"Updated Product\", \"description\":\"Updated description\", \"price\":29.99, \"category\":\"Updated Category\"}"
 
 Remplacez {product_id} par l'UUID du produit.
 
@@ -138,12 +138,12 @@ Réponse :
 
     Commande CURL :
 
-curl -X DELETE http://localhost:3000/api/products/{product_id}
+    curl -X DELETE http://localhost:3000/api/products/{product_id}
 
 Remplacez {product_id} par l'UUID du produit.
 
-Réponse :
+    Réponse :
 
-{
-"message": "Product deleted successfully"
-}
+    {
+    "message": "Product deleted successfully"
+    }
