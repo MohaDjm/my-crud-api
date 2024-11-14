@@ -1,5 +1,6 @@
 const ProductService = require('../services/productService');
 
+// Controller to handle product creation
 exports.createProduct = async (req, res) => {
   try {
     const product = await ProductService.createProduct(req.body);
@@ -9,6 +10,7 @@ exports.createProduct = async (req, res) => {
   }
 };
 
+// Controller to fetch a product by ID
 exports.getProductById = async (req, res) => {
   try {
     const product = await ProductService.getProductById(req.params.id);
@@ -19,6 +21,7 @@ exports.getProductById = async (req, res) => {
   }
 };
 
+// Controller to update an existing product
 exports.updateProduct = async (req, res) => {
   try {
     await ProductService.updateProduct(req.params.id, req.body);
@@ -28,6 +31,7 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
+// Controller to delete a product by ID
 exports.deleteProduct = async (req, res) => {
   try {
     await ProductService.deleteProduct(req.params.id);
