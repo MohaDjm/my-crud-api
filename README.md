@@ -4,26 +4,26 @@
 Cette API permet de gérer des produits avec des opérations CRUD (Create, Read, Update, Delete). Elle utilise Node.js pour le backend et Apache Cassandra comme base de données NoSQL. Le projet est conçu pour gérer de gros volumes de données, en profitant de la performance de Cassandra pour des opérations de lecture/écriture rapides.  
 ## *✨ Fonctionnalités*
 
-    Créer un produit : Ajoutez de nouveaux produits dans la base de données.
-    Lire un produit : Récupérez les détails d'un produit spécifique par son ID.
-    Mettre à jour un produit : Modifiez les informations d'un produit existant.
-    Supprimer un produit : Retirez un produit de la base de données.
+* Créer un produit : Ajoutez de nouveaux produits dans la base de données.
+* Lire un produit : Récupérez les détails d'un produit spécifique par son ID.
+* Mettre à jour un produit : Modifiez les informations d'un produit existant.
+* Supprimer un produit : Retirez un produit de la base de données.
 
 ## *🛠 Pré-requis d'Installation*
 Logiciels Nécessaires
 
-    Node.js : Version 12 ou supérieure.
-    Apache Cassandra : Version 4.0 ou supérieure.
-    Git : Pour cloner le projet.
-    Docker (facultatif) : Pour exécuter Cassandra dans un conteneur Docker.
+* Node.js : Version 12 ou supérieure.
+* Apache Cassandra : Version 4.0 ou supérieure.
+* Git : Pour cloner le projet.
+* Docker (facultatif) : Pour exécuter Cassandra dans un conteneur Docker.
 
 ## *📋 Dépendances*
 
 Les principales dépendances sont :
 
-    express : Framework pour gérer les routes et les requêtes HTTP.
-    cassandra-driver : Bibliothèque pour interagir avec Cassandra.
-    dotenv : Gestion des variables d'environnement.
+* express : Framework pour gérer les routes et les requêtes HTTP.
+* cassandra-driver : Bibliothèque pour interagir avec Cassandra.
+* dotenv : Gestion des variables d'environnement.
 
 ## *🚀 Installation*
 
