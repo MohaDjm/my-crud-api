@@ -29,62 +29,68 @@ Les principales dépendances sont :
 
     Cloner le projet :
 
-        git clone https://github.com/MohaDjm/my-crud-api.git
-        cd my-crud-api
+git clone https://github.com/MohaDjm/my-crud-api.git
+cd my-crud-api
 
-    Installer les dépendances :
+Installer les dépendances :
 
-        npm install
+npm install
 
-    Configurer la base de données Cassandra :
+Configurer la base de données Cassandra :
 
     Assurez-vous que Cassandra est en cours d'exécution.
     Dans cqlsh, créez un keyspace et une table products :
 
-        CREATE KEYSPACE test_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+    CREATE KEYSPACE test_keyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
 
-        USE test_keyspace;
+    USE test_keyspace;
 
-        CREATE TABLE products (
+    CREATE TABLE products (
         product_id UUID PRIMARY KEY,
         name TEXT,
         description TEXT,
         price DECIMAL,
         category TEXT
-        );
+    );
 
-    Configurer les variables d'environnement :
+Configurer les variables d'environnement :
 
     Créez un fichier .env à la racine du projet pour stocker les configurations, comme le port de l'API :
+
         PORT=3000
 
-    ▶️ Démarrage du Projet
+▶️ Démarrage du Projet
 
-    Pour démarrer le serveur en mode développement, exécutez :
-        node app.js
+Pour démarrer le serveur en mode développement, exécutez :
 
-    🌐 Utilisation de l'API avec CURL
+node app.js
 
-    Voici des exemples de requêtes CURL pour chaque route de l'API.
-    ➕ Créer un Produit
+L'API sera accessible à l'adresse http://localhost:3000.
+🌐 Utilisation de l'API avec CURL
+
+Voici des exemples de requêtes CURL pour chaque route de l'API.
+➕ Créer un Produit
 
     Méthode : POST
     URL : http://localhost:3000/api/products
     Commande CURL :
-        curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d "{\"name\":\"Example Product\", \"description\":\"This is an example product\", \"price\":19.99, \"category\":\"Electronics\"}"
-    Réponse :
-        {
-        "message": "Product created successfully",
-        "product": {
-            "product_id": "UUID",
-            "name": "Example Product",
-            "description": "This is an example product",
-            "price": 19.99,
-            "category": "Electronics"
-        }
-        }
 
-    📖 Lire un Produit par ID
+curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d "{\"name\":\"Example Product\", \"description\":\"This is an example product\", \"price\":19.99, \"category\":\"Electronics\"}"
+
+Réponse :
+
+    {
+      "message": "Product created successfully",
+      "product": {
+        "product_id": "UUID",
+        "name": "Example Product",
+        "description": "This is an example product",
+        "price": 19.99,
+        "category": "Electronics"
+      }
+    }
+
+📖 Lire un Produit par ID
 
     Méthode : GET
 
@@ -138,6 +144,6 @@ Remplacez {product_id} par l'UUID du produit.
 
 Réponse :
 
-    {
-      "message": "Product deleted successfully"
-    }
+{
+"message": "Product deleted successfully"
+}
