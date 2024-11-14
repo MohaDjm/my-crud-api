@@ -1,8 +1,8 @@
-#titre📦 API CRUD avec Node.js et Cassandra  
-##titre📄 Description du Projet
+### 📦 API CRUD avec Node.js et Cassandra  
+## 📄 Description du Projet
 
-Cette API permet de gérer des produits avec des opérations CRUD (Create, Read, Update, Delete). Elle utilise Node.js pour le backend et Apache Cassandra comme base de données NoSQL. Le projet est conçu pour gérer de gros volumes de données, en profitant de la performance de Cassandra pour des opérations de lecture/écriture rapides.
-✨ Fonctionnalités
+Cette API permet de gérer des produits avec des opérations CRUD (Create, Read, Update, Delete). Elle utilise Node.js pour le backend et Apache Cassandra comme base de données NoSQL. Le projet est conçu pour gérer de gros volumes de données, en profitant de la performance de Cassandra pour des opérations de lecture/écriture rapides.  
+##*✨ Fonctionnalités*
 
     Créer un produit : Ajoutez de nouveaux produits dans la base de données.
     Lire un produit : Récupérez les détails d'un produit spécifique par son ID.
