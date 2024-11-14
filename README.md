@@ -2,14 +2,14 @@
 ## 📄 Description du Projet
 
 Cette API permet de gérer des produits avec des opérations CRUD (Create, Read, Update, Delete). Elle utilise Node.js pour le backend et Apache Cassandra comme base de données NoSQL. Le projet est conçu pour gérer de gros volumes de données, en profitant de la performance de Cassandra pour des opérations de lecture/écriture rapides.  
-##*✨ Fonctionnalités*
+## *✨ Fonctionnalités*
 
     Créer un produit : Ajoutez de nouveaux produits dans la base de données.
     Lire un produit : Récupérez les détails d'un produit spécifique par son ID.
     Mettre à jour un produit : Modifiez les informations d'un produit existant.
     Supprimer un produit : Retirez un produit de la base de données.
 
-🛠 Pré-requis d'Installation
+## *🛠 Pré-requis d'Installation*
 Logiciels Nécessaires
 
     Node.js : Version 12 ou supérieure.
@@ -17,7 +17,7 @@ Logiciels Nécessaires
     Git : Pour cloner le projet.
     Docker (facultatif) : Pour exécuter Cassandra dans un conteneur Docker.
 
-📋 Dépendances
+## *📋 Dépendances*
 
 Les principales dépendances sont :
 
@@ -25,7 +25,7 @@ Les principales dépendances sont :
     cassandra-driver : Bibliothèque pour interagir avec Cassandra.
     dotenv : Gestion des variables d'environnement.
 
-🚀 Installation
+## *🚀 Installation*
 
 Cloner le projet :
 
@@ -59,17 +59,17 @@ Créez un fichier .env à la racine du projet pour stocker les configurations, c
 
         PORT=3000
 
-▶️ Démarrage du Projet
+## *▶️ Démarrage du Projet*
 
 Pour démarrer le serveur en mode développement, exécutez :
 
     node app.js
 
-L'API sera accessible à l'adresse http://localhost:3000.
-🌐 Utilisation de l'API avec CURL
+L'API sera accessible à l'adresse http://localhost:3000.  
+## 🌐 Utilisation de l'API avec CURL
 
-Voici des exemples de requêtes CURL pour chaque route de l'API.
-➕ Créer un Produit
+Voici des exemples de requêtes CURL pour chaque route de l'API.  
+## *➕ Créer un Produit*
 
     Méthode : POST
     URL : http://localhost:3000/api/products
@@ -90,7 +90,7 @@ Réponse :
       }
     }
 
-📖 Lire un Produit par ID
+## *📖 Lire un Produit par ID*
 
     Méthode : GET
 
@@ -112,7 +112,7 @@ Réponse (exemple) :
       "category": "Electronics"
     }
 
-📝 Mettre à Jour un Produit
+## *📝 Mettre à Jour un Produit*
 
     Méthode : PUT
 
@@ -130,7 +130,7 @@ Réponse :
       "message": "Product updated successfully"
     }
 
-❌ Supprimer un Produit
+## *❌ Supprimer un Produit*
 
     Méthode : DELETE
 
