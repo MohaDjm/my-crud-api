@@ -1,7 +1,7 @@
-const ProductService = require('../services/productService');
+import * as ProductService from '../services/productService.js';
 
 // Controller to handle product creation
-exports.createProduct = async (req, res) => {
+export const createProduct = async (req, res) => {
   try {
     const product = await ProductService.createProduct(req.body);
     res.status(201).json({ message: 'Product created successfully', product });
@@ -11,7 +11,7 @@ exports.createProduct = async (req, res) => {
 };
 
 // Controller to fetch a product by ID
-exports.getProductById = async (req, res) => {
+export const getProductById = async (req, res) => {
   try {
     const product = await ProductService.getProductById(req.params.id);
     if (!product) return res.status(404).json({ message: 'Product not found' });
@@ -22,7 +22,7 @@ exports.getProductById = async (req, res) => {
 };
 
 // Controller to update an existing product
-exports.updateProduct = async (req, res) => {
+export const updateProduct = async (req, res) => {
   try {
     await ProductService.updateProduct(req.params.id, req.body);
     res.status(200).json({ message: 'Product updated successfully' });
@@ -32,7 +32,7 @@ exports.updateProduct = async (req, res) => {
 };
 
 // Controller to delete a product by ID
-exports.deleteProduct = async (req, res) => {
+export const deleteProduct = async (req, res) => {
   try {
     await ProductService.deleteProduct(req.params.id);
     res.status(200).json({ message: 'Product deleted successfully' });

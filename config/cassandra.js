@@ -1,5 +1,7 @@
-const cassandra = require('cassandra-driver');
-require('dotenv').config();
+import cassandra from 'cassandra-driver';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Create a Cassandra client with connection details
 const client = new cassandra.Client({
@@ -15,4 +17,4 @@ client
   .catch((err) => console.error('Failed to connect to Cassandra', err));
 
 // Export the client for use in other modules
-module.exports = client;
+export default client;

@@ -1,8 +1,8 @@
-const client = require('../config/cassandra');
-const cassandra = require('cassandra-driver');
+import client from '../config/cassandra.js';
+import cassandra from 'cassandra-driver';
 
 // Service to create a new product in the database
-exports.createProduct = async (productData) => {
+export const createProduct = async (productData) => {
   const query =
     'INSERT INTO products (product_id, name, description, price, category) VALUES (?, ?, ?, ?, ?)';
   const params = [
@@ -16,14 +16,14 @@ exports.createProduct = async (productData) => {
 };
 
 // Service to retrieve a product by its ID
-exports.getProductById = async (id) => {
+export const getProductById = async (id) => {
   const query = 'SELECT * FROM products WHERE product_id = ?';
   const result = await client.execute(query, [id], { prepare: true });
   return result.rows[0];
 };
 
 // Service to update an existing product by its ID
-exports.updateProduct = async (id, updates) => {
+export const updateProduct = async (id, updates) => {
   const query =
     'UPDATE products SET name = ?, description = ?, price = ?, category = ? WHERE product_id = ?';
   const params = [
@@ -37,7 +37,7 @@ exports.updateProduct = async (id, updates) => {
 };
 
 // Service to delete a product by its ID
-exports.deleteProduct = async (id) => {
+export const deleteProduct = async (id) => {
   const query = 'DELETE FROM products WHERE product_id = ?';
   await client.execute(query, [id], { prepare: true });
 };

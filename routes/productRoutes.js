@@ -1,7 +1,13 @@
-const express = require('express');
-const { check, validationResult } = require('express-validator');
+import express from 'express';
+import { check, validationResult } from 'express-validator';
+import {
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+} from '../controllers/productController.js';
+
 const router = express.Router();
-const productController = require('../controllers/productController');
 
 // Middleware to validate incoming product data
 const validateProduct = [
@@ -25,21 +31,21 @@ router.post(
   '/products',
   validateProduct,
   handleValidationErrors,
-  productController.createProduct
+  createProduct
 );
 
 // Route to get a product by ID
-router.get('/products/:id', productController.getProductById);
+router.get('/products/:id', getProductById);
 
 // Route to update a product by ID with validation
 router.put(
   '/products/:id',
   validateProduct,
   handleValidationErrors,
-  productController.updateProduct
+  updateProduct
 );
 
 // Route to delete a product by ID
-router.delete('/products/:id', productController.deleteProduct);
+router.delete('/products/:id', deleteProduct);
 
-module.exports = router;
+export default router;
